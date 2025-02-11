@@ -1,5 +1,6 @@
+
 import { motion } from "framer-motion";
-import { ChevronDown, Github, Mail, Linkedin } from "lucide-react";
+import { ChevronDown, Github, Mail, Linkedin as LinkedinIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -270,7 +271,7 @@ const Index = () => {
               M'envoyer un Email
             </Button>
             <Button size="lg" variant="outline" className="gap-2">
-              <Linkedin className="w-4 h-4" />
+              <LinkedinIcon className="w-4 h-4" />
               LinkedIn
             </Button>
           </div>
