@@ -38,6 +38,30 @@ const experiences = [
   }
 ];
 
+const sideProjects = [
+  {
+    title: "AI Movie Recommender",
+    description: "Application web utilisant l'intelligence artificielle pour recommander des films basés sur les préférences des utilisateurs.",
+    technologies: ["Python", "React", "TensorFlow"],
+    link: "https://github.com/username/ai-movie-recommender",
+    status: "En cours"
+  },
+  {
+    title: "Weather Dashboard",
+    description: "Dashboard météo en temps réel avec visualisations de données et prévisions sur 7 jours.",
+    technologies: ["React", "D3.js", "OpenWeather API"],
+    link: "https://github.com/username/weather-dashboard",
+    status: "Terminé"
+  },
+  {
+    title: "Task Manager CLI",
+    description: "Outil de gestion de tâches en ligne de commande avec synchronisation cloud.",
+    technologies: ["Node.js", "MongoDB", "Commander.js"],
+    link: "https://github.com/username/task-cli",
+    status: "En développement"
+  }
+];
+
 const blogPosts = [
   {
     title: "Créer des Applications React Évolutives",
@@ -149,6 +173,49 @@ const Index = () => {
                     <Badge key={tech} variant="secondary">{tech}</Badge>
                   ))}
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Side Projects Section */}
+      <section className="py-20 px-4 bg-white">
+        <motion.div 
+          className="max-w-5xl mx-auto"
+          {...fadeInUp}
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">Projets Personnels</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sideProjects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+              >
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                  <div className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-xl font-semibold">{project.title}</h3>
+                      <Badge variant="secondary">{project.status}</Badge>
+                    </div>
+                    <p className="text-neutral-600 mb-4">{project.description}</p>
+                    <div className="space-y-4">
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech) => (
+                          <Badge key={tech} variant="outline">{tech}</Badge>
+                        ))}
+                      </div>
+                      <Button variant="link" className="p-0 h-auto text-neutral-500 hover:text-neutral-900" asChild>
+                        <a href={project.link} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4 mr-2" />
+                          Voir le projet
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </Card>
               </motion.div>
             ))}
           </div>
