@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ChevronDown, Github, Mail, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,30 @@ const fadeInUp = {
 
 const skills = [
   "TypeScript", "React", "Node.js", "PostgreSQL", "AWS", "Docker"
+];
+
+const experiences = [
+  {
+    title: "Développeur Full Stack Senior",
+    company: "Tech Solutions SA",
+    period: "2021 - Présent",
+    description: "Direction technique des projets majeurs, mise en place d'architectures scalables, et mentorat d'équipe.",
+    technologies: ["React", "Node.js", "AWS"]
+  },
+  {
+    title: "Développeur Front-end",
+    company: "Digital Agency",
+    period: "2019 - 2021",
+    description: "Développement d'applications web performantes, optimisation UX et intégration de systèmes complexes.",
+    technologies: ["Vue.js", "TypeScript", "GraphQL"]
+  },
+  {
+    title: "Développeur Junior",
+    company: "StartUp Innovation",
+    period: "2018 - 2019",
+    description: "Contribution au développement de fonctionnalités front-end et collaboration avec l'équipe design.",
+    technologies: ["React", "JavaScript", "CSS"]
+  }
 ];
 
 const blogPosts = [
@@ -91,6 +114,41 @@ const Index = () => {
                 className="p-6 rounded-lg bg-neutral-50 hover:bg-neutral-100 transition-colors"
               >
                 <h3 className="font-semibold text-lg">{skill}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-20 px-4">
+        <motion.div 
+          className="max-w-5xl mx-auto"
+          {...fadeInUp}
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">Expérience Professionnelle</h2>
+          <div className="space-y-8">
+            {experiences.map((experience, index) => (
+              <motion.div
+                key={experience.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-neutral-900">{experience.title}</h3>
+                    <p className="text-neutral-600">{experience.company}</p>
+                  </div>
+                  <span className="text-neutral-500 text-sm mt-2 md:mt-0">{experience.period}</span>
+                </div>
+                <p className="text-neutral-700 mb-4">{experience.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {experience.technologies.map((tech) => (
+                    <Badge key={tech} variant="secondary">{tech}</Badge>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
