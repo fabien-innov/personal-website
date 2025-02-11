@@ -17,21 +17,21 @@ const skills = [
 
 const blogPosts = [
   {
-    title: "Building Scalable React Applications",
-    excerpt: "Learn the best practices for building large-scale React applications with modern tools and techniques.",
-    date: "Mar 15, 2024",
+    title: "Créer des Applications React Évolutives",
+    excerpt: "Découvrez les meilleures pratiques pour développer des applications React à grande échelle avec des outils et techniques modernes.",
+    date: "15 Mars 2024",
     category: "React"
   },
   {
-    title: "The Future of Web Development",
-    excerpt: "Exploring upcoming trends and technologies that will shape the future of web development.",
-    date: "Mar 10, 2024",
+    title: "L'Avenir du Développement Web",
+    excerpt: "Explorer les tendances et technologies émergentes qui façonneront l'avenir du développement web.",
+    date: "10 Mars 2024",
     category: "Web Dev"
   },
   {
-    title: "Mastering TypeScript",
-    excerpt: "A comprehensive guide to using TypeScript effectively in your projects.",
-    date: "Mar 5, 2024",
+    title: "Maîtriser TypeScript",
+    excerpt: "Un guide complet pour utiliser efficacement TypeScript dans vos projets.",
+    date: "5 Mars 2024",
     category: "TypeScript"
   }
 ];
@@ -47,17 +47,17 @@ const Index = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <Badge className="mb-4" variant="secondary">Available for opportunities</Badge>
+          <Badge className="mb-4" variant="secondary">Disponible pour des opportunités</Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-neutral-900">
-            Software Developer
+            Développeur Logiciel
           </h1>
           <p className="text-xl text-neutral-600 leading-relaxed">
-            Crafting elegant solutions to complex problems with modern technologies.
+            Création de solutions élégantes pour des problèmes complexes avec des technologies modernes.
           </p>
           <div className="flex gap-4 justify-center mt-8">
             <Button size="lg" className="gap-2">
               <Mail className="w-4 h-4" />
-              Contact Me
+              Me Contacter
             </Button>
             <Button size="lg" variant="outline" className="gap-2">
               <Github className="w-4 h-4" />
@@ -80,7 +80,7 @@ const Index = () => {
           className="max-w-5xl mx-auto"
           {...fadeInUp}
         >
-          <h2 className="text-3xl font-bold text-center mb-12">Skills & Expertise</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Compétences & Expertise</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {skills.map((skill, index) => (
               <motion.div
@@ -104,8 +104,8 @@ const Index = () => {
             className="text-center mb-12"
             {...fadeInUp}
           >
-            <Badge variant="secondary" className="mb-4">Latest Articles</Badge>
-            <h2 className="text-3xl font-bold">Blog & Insights</h2>
+            <Badge variant="secondary" className="mb-4">Derniers Articles</Badge>
+            <h2 className="text-3xl font-bold">Blog & Perspectives</h2>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
@@ -135,14 +135,14 @@ const Index = () => {
           className="max-w-3xl mx-auto text-center space-y-8"
           {...fadeInUp}
         >
-          <h2 className="text-3xl font-bold">Let's Connect</h2>
+          <h2 className="text-3xl font-bold">Connectons-nous</h2>
           <p className="text-neutral-300">
-            Whether you have a project in mind or just want to chat, feel free to reach out.
+            Que vous ayez un projet en tête ou que vous souhaitiez simplement discuter, n'hésitez pas à me contacter.
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" variant="secondary" className="gap-2">
               <Mail className="w-4 h-4" />
-              Email Me
+              M'envoyer un Email
             </Button>
             <Button size="lg" variant="outline" className="gap-2">
               <Linkedin className="w-4 h-4" />
