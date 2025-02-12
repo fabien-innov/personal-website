@@ -97,19 +97,23 @@ const Index = () => {
         >
           <Badge className="mb-4" variant="secondary">Disponible pour des opportunités</Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-neutral-900">
-            Développeur Logiciel
+            Data engineer
           </h1>
           <p className="text-xl text-neutral-600 leading-relaxed">
-            Création de solutions élégantes pour des problèmes complexes avec des technologies modernes.
+            Je vous aide à mettre en place les pipelines de données au sein de votre infrastucture
           </p>
           <div className="flex gap-4 justify-center mt-8">
-            <Button size="lg" className="gap-2">
+            <Button size="lg" className="gap-2" variant="default">
               <Mail className="w-4 h-4" />
               Me Contacter
             </Button>
             <Button size="lg" variant="outline" className="gap-2">
               <Github className="w-4 h-4" />
               GitHub
+            </Button>
+            <Button size="lg" variant="outline" className="gap-2">
+              <LinkedinIcon className="w-4 h-4" />
+              LinkedIn
             </Button>
           </div>
         </motion.div>
@@ -261,16 +265,16 @@ const Index = () => {
           className="max-w-3xl mx-auto text-center space-y-8"
           {...fadeInUp}
         >
-          <h2 className="text-3xl font-bold">Connectons-nous</h2>
+          <h2 className="text-3xl font-bold">Restons connectés</h2>
           <p className="text-neutral-300">
             Que vous ayez un projet en tête ou que vous souhaitiez simplement discuter, n'hésitez pas à me contacter.
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" variant="secondary" className="gap-2">
               <Mail className="w-4 h-4" />
-              M'envoyer un Email
+              Me contacter
             </Button>
-            <Button size="lg" variant="outline" className="gap-2">
+            <Button size="lg" variant="secondary" className="gap-2">
               <LinkedinIcon className="w-4 h-4" />
               LinkedIn
             </Button>
